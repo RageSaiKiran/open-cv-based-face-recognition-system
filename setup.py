@@ -11,6 +11,8 @@ if sys.platform == 'win32':
 
 print('kiranmain2')
 print('kiranmain3')
+print('kiranmain4')
+
 
 executables = [Executable("train.py", base=base)]
 
