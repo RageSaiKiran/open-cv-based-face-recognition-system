@@ -1,0 +1,19 @@
+Index: setup.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from cx_Freeze import setup, Executable\r\nimport sys,os\r\nPYTHON_INSTALL_DIR = os.path.dirname(os.path.dirname(os.__file__))\r\nos.environ['TCL_LIBRARY'] = os.path.join(PYTHON_INSTALL_DIR, 'tcl', 'tcl8.6')\r\nos.environ['TK_LIBRARY'] = os.path.join(PYTHON_INSTALL_DIR, 'tcl', 'tk8.6')\r\n#program for exe file.\r\nbase = None\r\n\r\nif sys.platform == 'win32':\r\n    base = None\r\n\r\n\r\nexecutables = [Executable(\"train.py\", base=base)]\r\n\r\npackages = [\"idna\",\"os\",\"sys\",\"cx_Freeze\",\"tkinter\",\"cv2\",\"setup\",\r\n            \"numpy\",\"PIL\",\"pandas\",\"datetime\",\"time\"]\r\noptions = {\r\n    'build_exe': {\r\n            \r\n        'packages':packages,\r\n    },\r\n\r\n}\r\n\r\nsetup(\r\n    name = \"ToolBox\",\r\n    options = options,\r\n    version = \"0.0.1\",\r\n    description = 'Vision ToolBox',\r\n    executables = executables\r\n)\r\n\r\n#write python setup build \r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/setup.py b/setup.py
+--- a/setup.py	(revision 0a9b8ee93003eb15a62143ba0565caa6e1bbe22f)
++++ b/setup.py	(date 1657646820442)
+@@ -9,6 +9,8 @@
+ if sys.platform == 'win32':
+     base = None
+ 
++print("ragesaikiran")
++
+ 
+ executables = [Executable("train.py", base=base)]
+ 
