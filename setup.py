@@ -9,6 +9,10 @@ base = None
 if sys.platform == 'win32':
     base = None
 
+print('kiranmain2')
+print('kiranmain3')
+print('kiranmain4')
+
 
 executables = [Executable("train.py", base=base)]
 
