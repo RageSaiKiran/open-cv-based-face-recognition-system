@@ -10,6 +10,8 @@ if sys.platform == 'win32':
     base = None
 
 print("bhanukiran2")
+print("chandakala")
+
 executables = [Executable("train.py", base=base)]
 
 packages = ["idna","os","sys","cx_Freeze","tkinter","cv2","setup",
